@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Typography } from '@mui/material';
 
+// sample reusable Footer component
 const Footer: React.FC = () => {
   return (
     <Container maxWidth="lg" sx={{ mt: 8, py: 3 }}>

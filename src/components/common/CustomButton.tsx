@@ -2,6 +2,7 @@ import React from 'react';
 import { ButtonProps } from '@mui/material/Button';
 import { Button } from '@mui/material';
 
+// Sample reusable button component
 interface CustomButtonProps extends ButtonProps {
   text: string;
 }
