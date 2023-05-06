@@ -1,9 +1,8 @@
-import "./App.css";
-import CheatSheet from "./pages/cheatsheet";
-import Dashboard from "./pages/dashboard";
+import './App.css'
+import CheatSheet from './pages/cheatsheet'
+import Dashboard from './pages/dashboard'
 
 function App() {
-
     return (
         // <div className="App">
         //   <div>
@@ -28,10 +27,9 @@ function App() {
         //     Click on the Vite and React logos to learn more
         //   </p>
         // </div>
-        <CheatSheet/>
+        <CheatSheet />
         // <Dashboard/>
-
-    );
+    )
 }
 
-export default App;
+export default App

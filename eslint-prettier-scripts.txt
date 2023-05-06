@@ -1,0 +1,9 @@
+Here's how to use the eslint/prettier scripts in package.json. Also showing what they do.
+
+just run "npm run 'scriptName'"
+
+Example:
+
+npm run lint --will search for problems, but will not fix
+npm run lint fix --will search and try to fix the problems.
+npm run format --will call prettier to fix the code style.
