@@ -1,18 +1,18 @@
-import React from 'react';
-import { ButtonProps } from '@mui/material/Button';
-import { Button } from '@mui/material';
+import React from 'react'
+import { ButtonProps } from '@mui/material/Button'
+import { Button } from '@mui/material'
 
 // Sample reusable button component
 interface CustomButtonProps extends ButtonProps {
-  text: string;
+    text: string
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({ text, ...props }) => {
-  return (
-    <Button variant="contained" color="primary" {...props}>
-      {text}
-    </Button>
-  );
-};
+    return (
+        <Button variant='contained' color='primary' {...props}>
+            {text}
+        </Button>
+    )
+}
 
-export default CustomButton;
+export default CustomButton
