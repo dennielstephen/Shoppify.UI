@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, Container } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 // import FacebookIcon from '@mui/icons-material/Facebook';
 // import TwitterIcon from '@mui/icons-material/Twitter';
 // import InstagramIcon from '@mui/icons-material/Instagram';
@@ -7,7 +7,7 @@ import { Grid, Typography, Container } from '@mui/material';
 // sample reusable Footer component
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-black">
+        <footer className="bg-black sticky bottom-0">
           <div className="container mx-auto py-8 px-4">
             <Grid container spacing={4}>
                 <Grid item xs={12} md={3}>
