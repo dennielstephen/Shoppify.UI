@@ -1,4 +1,4 @@
-import {useState, MouseEvent} from 'react'
+import * as React from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
@@ -17,13 +17,13 @@ const pages = ['Home', 'Products', 'Explore']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 function ResponsiveAppBar() {
-    const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
-    const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null)
+    const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
+    const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null)
 
-    const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
+    const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget)
     }
-    const handleOpenUserMenu = (event: MouseEvent<HTMLElement>) => {
+    const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElUser(event.currentTarget)
     }
 
