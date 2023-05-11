@@ -7,7 +7,7 @@ import { Grid, Typography, Container } from '@mui/material';
 // sample reusable Footer component
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-black">
+        <footer className="bg-black sticky bottom-0">
           <div className="container mx-auto py-8 px-4">
             <Grid container spacing={4}>
                 <Grid item xs={12} md={3}>
