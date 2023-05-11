@@ -1,17 +1,12 @@
 import { useState } from 'react';
 // import { Link as RouterLink } from 'react-router-dom';
-import { AppBar, Toolbar, IconButton, Typography, Button, Drawer, List, ListItem, ListItemText, Menu, MenuItem } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Typography, Button, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import reactLogo from '../../assets/react.svg';
 
-
-const pages = ['Mens', 'Womens', 'Accessories', 'About']
-const profiles = ['My Orders', 'Profile', 'Login']
-
 const Navbar = () => {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleDrawerOpen = () => {
@@ -21,15 +16,6 @@ const Navbar = () => {
   const handleDrawerClose = () => {
     setDrawerOpen(false);
   };
-
-  const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
-
 
   return (
     <AppBar elevation={0} className='sticky bg-white/30 backdrop-blur-xl'>
@@ -42,12 +28,10 @@ const Navbar = () => {
 
         {/* Middle Navigation */}
         <nav className="hidden md:block">
-          {pages.map((page) => (
-            <Button key={page} className="mx-2 text-black">
-              {page}
-            </Button>
-          ))}
-          {/* <Button className="mx-2 text-black">
+          <Button className="mx-2 text-black">
+            Mens
+          </Button>
+          <Button className="mx-2 text-black">
             Womens
           </Button>
           <Button className="mx-2 text-black">
@@ -55,25 +39,17 @@ const Navbar = () => {
           </Button>
           <Button className="mx-2 text-black">
             About
-          </Button> */}
+          </Button>
         </nav>
 
         {/* Profile and Cart */}
-        <nav className="flex items-center gap-4">
+        <div className="flex items-center gap-4">
           <IconButton className='fill-black' aria-label="Shopping Cart">
             <ShoppingCartIcon />
           </IconButton>
-          <IconButton className='fill-black' onClick={handleMenuOpen} onMouseOver={handleMenuOpen} edge="end" aria-label="Profile" aria-haspopup="true">
+          <IconButton className='fill-black' aria-label="Profile">
             <AccountCircleIcon />
           </IconButton>
-          <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose} MenuListProps={{onMouseLeave:handleMenuClose}}>
-
-            {profiles.map((profile) => (
-              <MenuItem key={profile} onClick={handleMenuClose}>{profile}</MenuItem>
-            ))}
-            {/* <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>Login</MenuItem> */}
-          </Menu>
 
           {/* Hamburger menu for mobile */}
           <IconButton
@@ -103,7 +79,7 @@ const Navbar = () => {
               </ListItem>
             </List>
           </Drawer>
-        </nav>
+        </div>
       </Toolbar>
     </AppBar>
   );
