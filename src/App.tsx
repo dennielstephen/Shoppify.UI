@@ -5,6 +5,7 @@ import CheatSheet from './pages/cheatsheet'
 import Dashboard from './pages/dashboard'
 import ResponsiveAppBar from './components/common/ResponsiveAppBar'
 import ReduxToolkitDemo from './pages/reduxToolkitDemo'
+// import Slider from './components/common/Slider'
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <div className='items-center justify-center flex flex-col'>
                 <CheatSheet></CheatSheet>
                 <ReduxToolkitDemo></ReduxToolkitDemo>
+                {/* <Slider></Slider> */}
             </div>
             <Footer/>
         </div>

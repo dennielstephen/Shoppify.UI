@@ -1,9 +1,10 @@
 import { useState } from 'react';
 // import { Link as RouterLink } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Typography, Button, Drawer, List, ListItem, ListItemText } from '@mui/material';
-// import MenuIcon from '@mui/icons-material/Menu';
-// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import MenuIcon from '@mui/icons-material/Menu';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import reactLogo from '../../assets/react.svg';
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -21,7 +22,7 @@ const Navbar = () => {
       <Toolbar className="flex justify-between">
         {/* Logo */}
         <Button className="flex items-center gap-2">
-          <img src="/logo.svg" alt="Logo" className="h-8" />
+          <img src={reactLogo} alt="Logo" className="h-8" />
           <Typography variant="h6" className=" text-black font-sans">Shoppify</Typography>
         </Button>
 
@@ -43,13 +44,11 @@ const Navbar = () => {
 
         {/* Profile and Cart */}
         <div className="flex items-center gap-4">
-          <IconButton color="inherit" aria-label="Shopping Cart" className='text-black'>
-            {/* <ShoppingCartIcon /> */}
-            Shopping Cart
+          <IconButton className='fill-black' aria-label="Shopping Cart">
+            <ShoppingCartIcon />
           </IconButton>
-          <IconButton color="inherit" aria-label="Profile" className='text-black'>
-            {/* <AccountCircleIcon /> */}
-            Account
+          <IconButton className='fill-black' aria-label="Profile">
+            <AccountCircleIcon />
           </IconButton>
 
           {/* Hamburger menu for mobile */}
@@ -60,8 +59,7 @@ const Navbar = () => {
             onClick={handleDrawerOpen}
             className="md:hidden"
           >
-            {/* <MenuIcon /> */}
-            Menu
+            <MenuIcon className='fill-black' />
           </IconButton>
 
           {/* Mobile Navigation Drawer */}

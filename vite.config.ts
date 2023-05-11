@@ -10,12 +10,16 @@ import { UserConfig } from 'vite'
 
 const config: UserConfig = {
     optimizeDeps: {
-        exclude: ['@mui/icons-material'],
-        include: ['@mui/material', '@emotion/react', '@emotion/styled'],
+        exclude: [],
+        include: ['@mui/material', '@emotion/react', '@emotion/styled', '@mui/icons-material'],
     },
     esbuild: {
         jsxInject: `import React from 'react'`,
     },
+    server: {
+        open: true,
+        port: 5173,
+    }
 }
 
 export default config
