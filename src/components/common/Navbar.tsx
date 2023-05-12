@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import { Link as RouterLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Typography, Button, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -28,18 +28,26 @@ const Navbar = () => {
 
         {/* Middle Navigation */}
         <nav className="hidden md:block">
-          <Button className="mx-2 text-black">
-            Mens
-          </Button>
-          <Button className="mx-2 text-black">
-            Womens
-          </Button>
-          <Button className="mx-2 text-black">
-            Accessories
-          </Button>
-          <Button className="mx-2 text-black">
-            About
-          </Button>
+          <Link to="/">
+            <Button className="mx-2 text-black">
+              Mens
+            </Button>
+          </Link>
+          <Link to="/">
+            <Button className="mx-2 text-black">
+              Womens
+            </Button>
+          </Link>
+          <Link to="/">
+            <Button className="mx-2 text-black">
+              Accessories
+            </Button>
+          </Link>
+          <Link to="/about">
+            <Button className="mx-2 text-black">
+              About
+            </Button>
+          </Link>
         </nav>
 
         {/* Profile and Cart */}
