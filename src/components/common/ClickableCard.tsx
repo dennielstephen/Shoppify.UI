@@ -9,6 +9,7 @@ interface Props {
   price: number;
   imageUrl: string;
   topSeller?: boolean;
+  size?: 'small' | 'medium' | 'large';
 }
 
 const ClickableCard: React.FC<Props> = ({
@@ -18,17 +19,18 @@ const ClickableCard: React.FC<Props> = ({
   price,
   imageUrl,
   topSeller = false,
+  size = 'medium',
 }) => {
-//   const navigate = useNavigate();
+  const navigate = useNavigate();
 
-//   const handleClick = () => {
-//     navigate(`/product/${id}`);
-//   };
+  const handleClick = () => {
+    navigate(`/product/${id}`);
+  };
 
   return (
     <Card
-      className="cursor-pointer transform hover:scale-105 transition duration-300 ease-in-out"
-    //   onClick={handleClick}
+      className={`cursor-pointer transform hover:scale-105 transition duration-300 ease-in-out ${size}`}
+      onClick={handleClick}
     >
       <CardMedia
         component="img"
